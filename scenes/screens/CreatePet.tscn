@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://ev4wj14lba2g"]
+
+[ext_resource type="Script" uid="uid://bfy0ueujdk3eu" path="res://scenes/screens/create_pet.gd" id="1_2cvw2"]
+
+[node name="Control" type="Control" unique_id=2022061089]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2cvw2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=58707731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=693457502]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelCreatePet" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2091873629]
+layout_mode = 2
+text = "Создай питомца"
+
+[node name="PetNameInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1721864158]
+layout_mode = 2
+placeholder_text = "Имя питомца"
+
+[node name="BodyRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1591282311]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=1972262302]
+layout_mode = 2
+text = "Обычный"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=933370855]
+layout_mode = 2
+text = "Толстый"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=1569021139]
+layout_mode = 2
+text = "Вытянутый"
+
+[node name="ColorRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2141437857]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=32154675]
+layout_mode = 2
+text = "Синий"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=553252088]
+layout_mode = 2
+text = "Зелёный"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=1332944676]
+layout_mode = 2
+text = "Оранжевый"
+
+[node name="PetImage" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=2123945575]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1301586464]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1840909075]
+layout_mode = 2
+text = "Готово"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BodyRow/Button" to="." method="_on_body_pressed" binds= ["round"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BodyRow/Button2" to="." method="_on_body_pressed" binds= ["angular"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BodyRow/Button3" to="." method="_on_body_pressed" binds= ["slim"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ColorRow/Button" to="." method="_on_color_pressed" binds= ["blue"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ColorRow/Button2" to="." method="_on_color_pressed" binds= ["green"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ColorRow/Button3" to="." method="_on_color_pressed" binds= ["orange"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_ready_pressed"]

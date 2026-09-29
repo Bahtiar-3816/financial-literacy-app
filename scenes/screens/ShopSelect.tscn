@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cnwplv0nemtkt"]
+
+[ext_resource type="Script" uid="uid://2gtehtkwla4h" path="res://scenes/screens/shop_select.gd" id="1_204xn"]
+[ext_resource type="Texture2D" uid="uid://7ev7ntlm3r8k" path="res://sprites/icon.svg" id="2_1g5y0"]
+[ext_resource type="PackedScene" uid="uid://hj2uw3icvjv0" path="res://scenes/components/Dialog.tscn" id="2_sbgt5"]
+
+[node name="ShopSelect" type="Control" unique_id=376370739]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_204xn")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=404094831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=75962811]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1042505977]
+layout_mode = 2
+text = "Куда пойдём за покупками?"
+horizontal_alignment = 1
+
+[node name="PetImage" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1963387350]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=159509869]
+custom_minimum_size = Vector2(328, 0)
+layout_mode = 2
+text = "Что выберешь?"
+autowrap_mode = 3
+
+[node name="ShopsRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=876140666]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ShopNear" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ShopsRow" unique_id=1761076697]
+layout_mode = 2
+
+[node name="ImageNear" type="TextureRect" parent="MarginContainer/VBoxContainer/ShopsRow/ShopNear" unique_id=1160138823]
+custom_minimum_size = Vector2(160, 240)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_1g5y0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonNear" type="Button" parent="MarginContainer/VBoxContainer/ShopsRow/ShopNear" unique_id=1942875982]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Зайти в ближний
+магазин −0⚡"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/ShopsRow" unique_id=334249646]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ShopFar" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ShopsRow" unique_id=431402374]
+layout_mode = 2
+
+[node name="ImageFar" type="TextureRect" parent="MarginContainer/VBoxContainer/ShopsRow/ShopFar" unique_id=1037213744]
+custom_minimum_size = Vector2(160, 240)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_1g5y0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonFar" type="Button" parent="MarginContainer/VBoxContainer/ShopsRow/ShopFar" unique_id=1764830348]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Зайти в дальний
+магазин −20⚡"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1741221366]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1148314202]
+layout_mode = 2
+text = "Назад"
+
+[node name="Dialog" parent="." unique_id=1454626488 instance=ExtResource("2_sbgt5")]
+visible = false
+layout_mode = 1

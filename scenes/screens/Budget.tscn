@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://oipvtwkhxdr2"]
+
+[ext_resource type="Script" uid="uid://8brhrux6hk" path="res://scenes/screens/budget.gd" id="1_wnki8"]
+[ext_resource type="PackedScene" uid="uid://hj2uw3icvjv0" path="res://scenes/components/Dialog.tscn" id="2_x4skq"]
+
+[node name="Budget" type="Control" unique_id=1565552961]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wnki8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=29071350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=337866324]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PlanBudget" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1476211989]
+layout_mode = 2
+text = "План бюджета"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=211310386]
+layout_mode = 2
+
+[node name="LabelAvailable" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1715709453]
+layout_mode = 2
+text = "Доступно: 0"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1724796132]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelRemainder" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1306614729]
+layout_mode = 2
+text = "Остаток: 0"
+
+[node name="PetImage" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1853187919]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=886825728]
+custom_minimum_size = Vector2(328, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95468724, 0.95468724, 0.95468724, 1)
+autowrap_mode = 3
+
+[node name="RowMandatory" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=792557215]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelMandatory" type="Label" parent="MarginContainer/VBoxContainer/RowMandatory" unique_id=970713072]
+layout_mode = 2
+text = "Обязательные"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/RowMandatory" unique_id=1195482857]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonMinus" type="Button" parent="MarginContainer/VBoxContainer/RowMandatory" unique_id=780007399]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "-"
+
+[node name="LabelMandatoryValue" type="Label" parent="MarginContainer/VBoxContainer/RowMandatory" unique_id=835579056]
+custom_minimum_size = Vector2(60, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonPlus" type="Button" parent="MarginContainer/VBoxContainer/RowMandatory" unique_id=1148196393]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "+"
+
+[node name="RowOptional" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1429274908]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelOptional" type="Label" parent="MarginContainer/VBoxContainer/RowOptional" unique_id=237324088]
+layout_mode = 2
+text = "Необязательные"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/RowOptional" unique_id=442618458]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonMinus" type="Button" parent="MarginContainer/VBoxContainer/RowOptional" unique_id=768064569]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "-"
+
+[node name="LabelOptionalValue" type="Label" parent="MarginContainer/VBoxContainer/RowOptional" unique_id=1444962309]
+custom_minimum_size = Vector2(60, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonPlus" type="Button" parent="MarginContainer/VBoxContainer/RowOptional" unique_id=1549186358]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "+"
+
+[node name="RowSavings" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1710116055]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelSavings" type="Label" parent="MarginContainer/VBoxContainer/RowSavings" unique_id=1950308900]
+layout_mode = 2
+text = "Накопления"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/RowSavings" unique_id=220502295]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonMinus" type="Button" parent="MarginContainer/VBoxContainer/RowSavings" unique_id=1874774137]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "-"
+
+[node name="LabelSavingsValue" type="Label" parent="MarginContainer/VBoxContainer/RowSavings" unique_id=2090052106]
+custom_minimum_size = Vector2(60, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonPlus" type="Button" parent="MarginContainer/VBoxContainer/RowSavings" unique_id=756070770]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "+"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=768350489]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonConfirm" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1335573912]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+text = "Подтвердить"
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1249045645]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+text = "Назад"
+
+[node name="ButtonFinish" type="Button" parent="MarginContainer/VBoxContainer" unique_id=251508058]
+visible = false
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+text = "Завершить задание"
+
+[node name="Dialog" parent="." unique_id=1454626488 instance=ExtResource("2_x4skq")]
+visible = false
+layout_mode = 1

@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://1s6tcpncs1ow"]
+
+[ext_resource type="Script" uid="uid://tehb7qs76cg2" path="res://scenes/screens/shop.gd" id="1_wdyig"]
+[ext_resource type="PackedScene" uid="uid://bk7w33b7j0452" path="res://scenes/screens/PurchaseHistory.tscn" id="2_36r0g"]
+[ext_resource type="PackedScene" uid="uid://hj2uw3icvjv0" path="res://scenes/components/Dialog.tscn" id="3_guikn"]
+
+[node name="Shop" type="Control" unique_id=423607802]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wdyig")
+
+[node name="Background" type="TextureRect" parent="." unique_id=463365827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1453418558]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1645761252]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1483693844]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TopBar" unique_id=355870743]
+layout_mode = 2
+text = "Магазин"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar" unique_id=327337076]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelBalance" type="Label" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1792875692]
+layout_mode = 2
+text = "Баланс: 100"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=590968328]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemsList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=590969020]
+layout_mode = 2
+
+[node name="ButtonNext" type="Button" parent="MarginContainer/VBoxContainer" unique_id=404033770]
+visible = false
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "Далее"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=848009517]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1082820766]
+custom_minimum_size = Vector2(246, 64)
+layout_mode = 2
+text = "Назад"
+
+[node name="ButtonHistory" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1125075650]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "История
+покупок"
+
+[node name="PurchaseHistory" parent="." unique_id=2031488164 instance=ExtResource("2_36r0g")]
+visible = false
+layout_mode = 1
+
+[node name="Dialog" parent="." unique_id=1454626488 instance=ExtResource("3_guikn")]
+visible = false
+layout_mode = 1

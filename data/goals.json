@@ -1,0 +1,5 @@
+[
+  { "id": "bike",     "title": "Велосипед", "price": 600 },
+  { "id": "robot",    "title": "Робот",     "price": 550 },
+  { "id": "aquarium", "title": "Аквариум",  "price": 400 }
+]

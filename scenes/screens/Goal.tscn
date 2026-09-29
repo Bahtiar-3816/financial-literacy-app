@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://n8bu7emjuy4j"]
+
+[ext_resource type="Script" uid="uid://dba7e0yquh6je" path="res://scenes/screens/goal.gd" id="1_4hskm"]
+[ext_resource type="PackedScene" uid="uid://de1n7bv5rfxd" path="res://scenes/screens/SavingsWindow.tscn" id="2_6av8w"]
+[ext_resource type="PackedScene" uid="uid://epkekrfrxmkd" path="res://scenes/screens/PurchaseDialog.tscn" id="3_cumlr"]
+
+[node name="Control" type="Control" unique_id=624666317]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4hskm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1579583529]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1824809071]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=651849678]
+layout_mode = 2
+text = "Накопление на цель"
+horizontal_alignment = 1
+
+[node name="LabelSavings" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1590308443]
+layout_mode = 2
+text = "Накоплено: 30"
+
+[node name="LabelGoalTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=517874221]
+layout_mode = 2
+text = "Цель: Велосипед"
+
+[node name="LabelGoalPrice" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1138633828]
+layout_mode = 2
+text = "Стоимость: 200"
+
+[node name="LabelRemaining" type="Label" parent="MarginContainer/VBoxContainer" unique_id=516741515]
+layout_mode = 2
+text = "Осталось: 170"
+
+[node name="GoalList" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=316517675]
+layout_mode = 2
+
+[node name="LabelStepTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=356497391]
+layout_mode = 2
+text = "Пополнить на:"
+
+[node name="StepRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1396245770]
+layout_mode = 2
+
+[node name="Button_10" type="Button" parent="MarginContainer/VBoxContainer/StepRow" unique_id=1873978897]
+custom_minimum_size = Vector2(60, 50)
+layout_mode = 2
+text = "10"
+
+[node name="Button_25" type="Button" parent="MarginContainer/VBoxContainer/StepRow" unique_id=345536243]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+text = "25"
+
+[node name="Button_50" type="Button" parent="MarginContainer/VBoxContainer/StepRow" unique_id=1507091977]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+text = "50"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1242138012]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=332229232]
+layout_mode = 2
+columns = 5
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1679278245]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonWithdraw" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1436786836]
+custom_minimum_size = Vector2(70, 64)
+layout_mode = 2
+text = "Снять"
+
+[node name="Savings" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1693815907]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Сбережения"
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1984394936]
+custom_minimum_size = Vector2(70, 64)
+layout_mode = 2
+text = "Назад"
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=2124602878]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonFinish" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1744099294]
+visible = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Завершить задание"
+
+[node name="SavingsWindow" parent="." unique_id=1462286922 instance=ExtResource("2_6av8w")]
+visible = false
+layout_mode = 1
+
+[node name="PurchaseDialog" parent="." unique_id=578279396 instance=ExtResource("3_cumlr")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StepRow/Button_10" to="." method="_on_step_pressed" binds= [10]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StepRow/Button_25" to="." method="_on_step_pressed" binds= [25]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StepRow/Button_50" to="." method="_on_step_pressed" binds= [50]]

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://c1rcjc8yktpj1"]
+
+[ext_resource type="Script" uid="uid://dy7ne7sob6qqj" path="res://scenes/screens/demo_dialog.gd" id="1_npstx"]
+
+[node name="DemoDialog" type="Control" unique_id=156608780]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_npstx")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=1717290889]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17641908, 0.17641911, 0.17641902, 1)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1182410233]
+custom_minimum_size = Vector2(320, 280)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1065298734]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1435957183]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelTitle" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1030444934]
+layout_mode = 2
+text = "Демо-режим"
+horizontal_alignment = 1
+
+[node name="ButtonOn" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1534001554]
+layout_mode = 2
+text = "Включить демо-режим"
+
+[node name="ButtonOff" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=982805558]
+layout_mode = 2
+text = "Выключить демо-режим"
+
+[node name="ButtonReset" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1376560840]
+layout_mode = 2
+text = "Сбросить профиль"
+
+[node name="ButtonClose" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=635357431]
+layout_mode = 2
+text = "Закрыть"

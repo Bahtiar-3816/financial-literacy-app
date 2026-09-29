@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cp20e4algkd5u"]
+
+[ext_resource type="Script" uid="uid://dhwkdny3mmsli" path="res://scenes/screens/adult_control.gd" id="1_re38c"]
+[ext_resource type="PackedScene" uid="uid://c1rcjc8yktpj1" path="res://scenes/screens/DemoDialog.tscn" id="2_w08a6"]
+
+[node name="Control" type="Control" unique_id=1177583308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_re38c")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=476272074]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2039406771]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2003691874]
+layout_mode = 2
+text = "Раздел для взрослого"
+horizontal_alignment = 1
+
+[node name="LabelTitleProgress" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1626663924]
+layout_mode = 2
+text = "Общий прогресс"
+
+[node name="LabelPeriods" type="Label" parent="MarginContainer/VBoxContainer" unique_id=164824162]
+layout_mode = 2
+text = "Периодов пройдено: 0"
+
+[node name="LabelTasks" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1704315299]
+layout_mode = 2
+text = "Заданий пройдено: 0"
+
+[node name="LabelTopics" type="Label" parent="MarginContainer/VBoxContainer" unique_id=946452596]
+custom_minimum_size = Vector2(328, 0)
+layout_mode = 2
+text = "Темы: ..."
+autowrap_mode = 3
+
+[node name="LabelStage" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1383430085]
+layout_mode = 2
+text = "Питомец: стадия 1"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1047697258]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1548493627]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Удерживайте для сброса"
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer" unique_id=812045417]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Назад"
+
+[node name="ButtonDemo" type="Button" parent="MarginContainer/VBoxContainer" unique_id=448634364]
+layout_mode = 2
+text = "Демо-режим (сброс и старт)"
+
+[node name="DemoDialog" parent="." unique_id=156608780 instance=ExtResource("2_w08a6")]
+visible = false
+layout_mode = 1

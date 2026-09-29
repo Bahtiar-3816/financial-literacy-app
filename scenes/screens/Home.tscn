@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://cq2qq43rb2f32"]
+
+[ext_resource type="Script" uid="uid://bjdr1p7ensuxt" path="res://scenes/screens/home.gd" id="1_1747l"]
+[ext_resource type="PackedScene" uid="uid://hj2uw3icvjv0" path="res://scenes/components/Dialog.tscn" id="2_1747l"]
+
+[node name="Home" type="Control" unique_id=705560016]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1747l")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=77169295]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=120541092]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ButtonAdult" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1380694106]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Для взрослого"
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1542681073]
+layout_mode = 2
+
+[node name="LabelMood" type="Label" parent="MarginContainer/VBoxContainer/TopBar" unique_id=718548051]
+layout_mode = 2
+text = "Настроение:"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1054546947]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BarMood" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar" unique_id=86331687]
+custom_minimum_size = Vector2(100, 16)
+layout_mode = 2
+size_flags_vertical = 4
+step = 1.0
+show_percentage = false
+
+[node name="LabelSavings" type="Label" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1181439517]
+visible = false
+layout_mode = 2
+text = "Копилка: "
+
+[node name="TopBar2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=391455446]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="MarginContainer/VBoxContainer/TopBar2" unique_id=1205999030]
+layout_mode = 2
+text = "Энергия:"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar2" unique_id=893158865]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BarEnergy" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar2" unique_id=655221414]
+custom_minimum_size = Vector2(100, 16)
+layout_mode = 2
+size_flags_vertical = 4
+step = 1.0
+show_percentage = false
+
+[node name="TopBar3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1200852939]
+layout_mode = 2
+
+[node name="LabelSatiety" type="Label" parent="MarginContainer/VBoxContainer/TopBar3" unique_id=1736203199]
+layout_mode = 2
+text = "Сытость:"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar3" unique_id=479321745]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BarSatiety" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar3" unique_id=1495324070]
+custom_minimum_size = Vector2(100, 16)
+layout_mode = 2
+size_flags_vertical = 4
+step = 1.0
+show_percentage = false
+
+[node name="LabelBalance" type="Label" parent="MarginContainer/VBoxContainer" unique_id=37942554]
+layout_mode = 2
+text = "Баланс: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PetPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=2071849770]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PetPanel" unique_id=1826902427]
+layout_mode = 2
+
+[node name="LabelPetName" type="Label" parent="MarginContainer/VBoxContainer/PetPanel/VBoxContainer" unique_id=1810620881]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PetImage" type="TextureRect" parent="MarginContainer/VBoxContainer/PetPanel/VBoxContainer" unique_id=1057995089]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BarExp" type="ProgressBar" parent="MarginContainer/VBoxContainer/PetPanel/VBoxContainer" unique_id=1337779752]
+custom_minimum_size = Vector2(200, 18)
+layout_mode = 2
+show_percentage = false
+
+[node name="LabelExp" type="Label" parent="MarginContainer/VBoxContainer/PetPanel/VBoxContainer" unique_id=605217769]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=34300328]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=362840410]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonRest" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=674502018]
+layout_mode = 2
+text = "Отдохнуть"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=442883918]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Actions" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=1010936974]
+layout_mode = 2
+columns = 2
+
+[node name="ButtonBudget" type="Button" parent="MarginContainer/VBoxContainer/Actions" unique_id=1602101588]
+custom_minimum_size = Vector2(162, 30)
+layout_mode = 2
+text = "Бюджет"
+
+[node name="ButtonTask" type="Button" parent="MarginContainer/VBoxContainer/Actions" unique_id=1429359026]
+custom_minimum_size = Vector2(162, 30)
+layout_mode = 2
+text = "Задания"
+
+[node name="ButtonShop" type="Button" parent="MarginContainer/VBoxContainer/Actions" unique_id=1270296611]
+custom_minimum_size = Vector2(162, 30)
+layout_mode = 2
+text = "Покупки"
+
+[node name="ButtonSavings" type="Button" parent="MarginContainer/VBoxContainer/Actions" unique_id=1344717129]
+custom_minimum_size = Vector2(162, 30)
+layout_mode = 2
+text = "Сбережения"
+
+[node name="ButtonSleep" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1659247552]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "Уложить спать"
+
+[node name="Dialog" parent="." unique_id=1454626488 instance=ExtResource("2_1747l")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Actions/ButtonBudget" to="." method="_on_budget_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Actions/ButtonTask" to="." method="_on_task_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Actions/ButtonShop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Actions/ButtonSavings" to="." method="_on_goal_pressed"]

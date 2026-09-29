@@ -1,0 +1,11 @@
+[
+  { "id": "food_basic",  "title": "Еда",         "price": 20, "type": "mandatory", "effect": "satiety+15", "icon": "res://sprites/icon.svg" },
+ { "id": "balloon",     "title": "Шарик",       "price": 10, "type": "optional",  "effect": "mood+5", "icon": "res://sprites/icon.svg" },
+  { "id": "food_tasty",  "title": "Вкусняшка",   "price": 35, "type": "mandatory", "effect": "satiety+25", "icon": "res://sprites/icon.svg" },
+  { "id": "medicine",    "title": "Лекарство",   "price": 40, "type": "mandatory", "effect": "energy+20", "icon": "res://sprites/icon.svg" },
+  { "id": "medicine",    "title": "Витамины",   "price": 30, "type": "mandatory", "effect": "energy+15", "icon": "res://sprites/icon.svg" },
+  { "id": "soap",        "title": "Мыло",        "price": 15, "type": "mandatory", "effect": "mood+5", "icon": "res://sprites/icon.svg" },
+  { "id": "toy_ball",    "title": "Мячик",       "price": 25, "type": "optional",  "effect": "mood+15", "icon": "res://sprites/icon.svg" },
+  { "id": "toy_robot",   "title": "Робот",       "price": 60, "type": "optional",  "effect": "mood+25", "icon": "res://sprites/icon.svg" },
+  { "id": "hat",         "title": "Шляпа",       "price": 30, "type": "optional",  "effect": "mood+10", "icon": "res://sprites/icon.svg" }
+]

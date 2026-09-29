@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://epkekrfrxmkd"]
+
+[ext_resource type="Script" uid="uid://cgeewxrd51lbi" path="res://scenes/screens/purchase_dialog.gd" id="1_b8axu"]
+
+[node name="PurchaseDialog" type="Control" unique_id=578279396]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b8axu")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=1826216978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1131255067]
+custom_minimum_size = Vector2(320, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=402670388]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1931466557]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=888110525]
+layout_mode = 2
+text = "Ты накопил достаточно!"
+
+[node name="LabelText" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1634693261]
+layout_mode = 2
+text = "Купить Аквариум?"
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=104142739]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=791235276]
+layout_mode = 2
+
+[node name="ButtonBuy" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=893498935]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+text = "Купить"
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=961646623]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonCancel" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2105025213]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+text = "Не сейчас"

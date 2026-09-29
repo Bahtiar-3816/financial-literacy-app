@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://c8ojrbadd4og2"]
+
+[ext_resource type="Script" uid="uid://cuyd777ern7f5" path="res://scenes/screens/day_result.gd" id="1_4r5mk"]
+
+[node name="DayResult" type="Control" unique_id=1982877345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4r5mk")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=796562914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=310142247]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1746940956]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Итог за прошлый день"
+horizontal_alignment = 1
+
+[node name="LabelMandatory" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2115224371]
+custom_minimum_size = Vector2(328, 70)
+layout_mode = 2
+text = "Обязательные расходы совпали с реальными"
+autowrap_mode = 3
+
+[node name="LabelOptional" type="Label" parent="MarginContainer/VBoxContainer" unique_id=482550742]
+custom_minimum_size = Vector2(328, 70)
+layout_mode = 2
+text = "Необязательные расходы совпали с реальными"
+autowrap_mode = 3
+
+[node name="LabelExp" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2058493202]
+layout_mode = 2
+text = "Опыт за день:"
+
+[node name="LabelEarned" type="Label" parent="MarginContainer/VBoxContainer" unique_id=270466646]
+layout_mode = 2
+text = "Питомец заработал:"
+
+[node name="LabelIncome" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1191311614]
+layout_mode = 2
+text = "Доход дня:"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=659606370]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LabelTotal" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1958267737]
+layout_mode = 2
+text = "Итого: 0 монет"
+horizontal_alignment = 2
+
+[node name="LabelMood" type="Label" parent="MarginContainer/VBoxContainer" unique_id=470353011]
+layout_mode = 2
+text = "Так держать!"
+horizontal_alignment = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=367859948]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonOk" type="Button" parent="MarginContainer/VBoxContainer" unique_id=644098771]
+layout_mode = 2
+text = "Ок"

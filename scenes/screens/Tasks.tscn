@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cbqvhyn74nklw"]
+
+[ext_resource type="Script" uid="uid://qywh75h41shi" path="res://scenes/screens/tasks.gd" id="1_3dxr5"]
+
+[node name="Control" type="Control" unique_id=848521708]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dxr5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=570983576]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1755106234]
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1946676462]
+layout_mode = 2
+
+[node name="LabelEnergy" type="Label" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1765224181]
+layout_mode = 2
+text = "Энергия: 0"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1380555352]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelBalance" type="Label" parent="MarginContainer/VBoxContainer/TopBar" unique_id=1801913070]
+layout_mode = 2
+text = "Баланс: 0"
+
+[node name="ListView" type="Control" parent="MarginContainer/VBoxContainer" unique_id=223678671]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/ListView" unique_id=341545693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TaskList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ListView/ScrollContainer" unique_id=1812541767]
+layout_mode = 2
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1522715750]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+text = "Назад"
