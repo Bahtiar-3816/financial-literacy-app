@@ -11,6 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2cvw2")
 
+[node name="Background" type="ColorRect" parent="." unique_id=2123704937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.29411766, 0.5019608, 1)
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=58707731]
 layout_mode = 1
 anchors_preset = 15
@@ -19,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
@@ -29,7 +38,9 @@ theme_override_constants/separation = 12
 
 [node name="LabelCreatePet" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2091873629]
 layout_mode = 2
-text = "Создай питомца"
+theme_override_font_sizes/font_size = 24
+text = "Создай своего питомца"
+horizontal_alignment = 1
 
 [node name="PetNameInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1721864158]
 layout_mode = 2
@@ -39,31 +50,61 @@ placeholder_text = "Имя питомца"
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=1972262302]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
-text = "Обычный"
+text = "Первый
+котенок"
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=1602493695]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=933370855]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
-text = "Толстый"
+text = "Второй
+котенок"
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=1244023883]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/BodyRow" unique_id=1569021139]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
-text = "Вытянутый"
+text = "Третий
+котенок"
 
 [node name="ColorRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2141437857]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=32154675]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
-text = "Синий"
+text = "Обычный"
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=1102107573]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=553252088]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-text = "Зелёный"
+text = "Серый"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=1439390018]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/ColorRow" unique_id=1332944676]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-text = "Оранжевый"
+text = "Розовый"
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1887022402]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="PetImage" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=2123945575]
 custom_minimum_size = Vector2(150, 150)
@@ -77,6 +118,7 @@ size_flags_vertical = 3
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1840909075]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Готово"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BodyRow/Button" to="." method="_on_body_pressed" binds= ["round"]]

@@ -11,14 +11,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nemfv")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1611403667]
+[node name="Background" type="ColorRect" parent="." unique_id=2041017147]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.21209751, 0.21209751, 0.21209751, 0.90000004)
+color = Color(0.2, 0.29411766, 0.5019608, 1)
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=1900023923]
 custom_minimum_size = Vector2(328, 0)

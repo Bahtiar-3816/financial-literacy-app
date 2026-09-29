@@ -48,6 +48,19 @@ func _ready() -> void:
 	
 	_show_step(0)
 
+func _apply_speaker_sprite(speaker: String) -> void:
+	match speaker:
+		"kitten": PetVisual.apply(pet_sprite, "kitten")
+		"cat": PetVisual.apply(pet_sprite, "cat")
+	
+	pet_sprite.modulate.a = 0
+	pet_sprite.scale = Vector2(0.9, 0.9)
+	pet_sprite.pivot_offset = pet_sprite.size / 2
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(pet_sprite, "modulate:a", 1.0, 0.2)
+	tween.tween_property(pet_sprite, "scale", Vector2(1.0, 1.0), 0.2)
+
 func _show_step(index: int) -> void:
 	if index < 0 or index >= steps.size():
 		_finish_task()
@@ -73,6 +86,7 @@ func _show_step(index: int) -> void:
 		name_label.text = str(ProfileManager.data.pet.name)
 	else:
 		name_label.text = SPEAKER_NAMES.get(speaker, "")
+	_apply_speaker_sprite(speaker)
 	
 	_animate_name()
 	

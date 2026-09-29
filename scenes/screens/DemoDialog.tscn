@@ -11,14 +11,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_npstx")
 
-[node name="Dimmer" type="ColorRect" parent="." unique_id=1717290889]
+[node name="Background" type="ColorRect" parent="." unique_id=1696154375]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.17641908, 0.17641911, 0.17641902, 1)
+color = Color(0.2, 0.29411766, 0.5019608, 1)
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=1182410233]
 custom_minimum_size = Vector2(320, 280)

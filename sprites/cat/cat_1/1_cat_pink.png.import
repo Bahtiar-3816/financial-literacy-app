@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bldn3wt1o6ifp"
-path="res://.godot/imported/task.png-7b9fed3774746a25c205ad25ecc0144f.ctex"
+uid="uid://bjl3hdbpw7ncy"
+path="res://.godot/imported/1_cat_pink.png-178ab3ae9ff6d9b53f133558af09401e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/button/task.png"
-dest_files=["res://.godot/imported/task.png-7b9fed3774746a25c205ad25ecc0144f.ctex"]
+source_file="res://sprites/cat/cat_1/1_cat_pink.png"
+dest_files=["res://.godot/imported/1_cat_pink.png-178ab3ae9ff6d9b53f133558af09401e.ctex"]
 
 [params]
 

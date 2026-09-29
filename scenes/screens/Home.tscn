@@ -12,6 +12,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1747l")
 
+[node name="Background" type="ColorRect" parent="." unique_id=1965830261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20017251, 0.29512665, 0.5037005, 1)
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=77169295]
 layout_mode = 1
 anchors_preset = 15
@@ -20,7 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
@@ -46,6 +55,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="BarMood" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar" unique_id=86331687]
+modulate = Color(1, 0.8392157, 0, 1)
 custom_minimum_size = Vector2(100, 16)
 layout_mode = 2
 size_flags_vertical = 4
@@ -69,6 +79,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="BarEnergy" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar2" unique_id=655221414]
+modulate = Color(1, 0.7176471, 0.3019608, 1)
 custom_minimum_size = Vector2(100, 16)
 layout_mode = 2
 size_flags_vertical = 4
@@ -87,6 +98,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="BarSatiety" type="ProgressBar" parent="MarginContainer/VBoxContainer/TopBar3" unique_id=1495324070]
+modulate = Color(0.9372549, 0.3254902, 0.3137255, 1)
 custom_minimum_size = Vector2(100, 16)
 layout_mode = 2
 size_flags_vertical = 4
@@ -117,12 +129,14 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="BarExp" type="ProgressBar" parent="MarginContainer/VBoxContainer/PetPanel/VBoxContainer" unique_id=1337779752]
+modulate = Color(0.15920863, 0.91894126, 0.4140046, 1)
 custom_minimum_size = Vector2(200, 18)
 layout_mode = 2
 show_percentage = false
 
 [node name="LabelExp" type="Label" parent="MarginContainer/VBoxContainer/PetPanel/VBoxContainer" unique_id=605217769]
 layout_mode = 2
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=34300328]
 layout_mode = 2

@@ -11,6 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5g1ts")
 
+[node name="Background" type="ColorRect" parent="." unique_id=195676749]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.29411766, 0.5019608, 1)
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1177439367]
 layout_mode = 1
 anchors_preset = 15
@@ -19,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
@@ -36,7 +45,12 @@ horizontal_alignment = 1
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1260480222]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "Научись копить вместе с питомцем"
+text = "Привет! Это Финни.
+Помоги ему: трать на нужное,
+ откладывай на мечту,
+покупай в радость.
+Готов?"
+horizontal_alignment = 1
 
 [node name="LabelDemo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=92156416]
 custom_minimum_size = Vector2(328, 0)
