@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://tehb7qs76cg2" path="res://scenes/screens/shop.gd" id="1_wdyig"]
 [ext_resource type="PackedScene" uid="uid://bk7w33b7j0452" path="res://scenes/screens/PurchaseHistory.tscn" id="2_36r0g"]
+[ext_resource type="Texture2D" uid="uid://cgwwtymljfab1" path="res://sprites/market/inside_market.png" id="2_dlpm5"]
 [ext_resource type="PackedScene" uid="uid://hj2uw3icvjv0" path="res://scenes/components/Dialog.tscn" id="3_guikn"]
 
 [node name="Shop" type="Control" unique_id=423607802]
@@ -13,14 +14,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wdyig")
 
-[node name="Background2" type="ColorRect" parent="." unique_id=162801688]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2053112641]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.29411766, 0.5019608, 1)
+texture = ExtResource("2_dlpm5")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1453418558]
 layout_mode = 1

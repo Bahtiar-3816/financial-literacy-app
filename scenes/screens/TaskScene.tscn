@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkq3lyu2ip15g"]
 
 [ext_resource type="Script" uid="uid://crl28yyq0h6vb" path="res://scenes/screens/task_scene.gd" id="1_1iy4y"]
+[ext_resource type="Texture2D" uid="uid://c175ducjeyd70" path="res://sprites/products/T8PF-9n5acjCQ4A5cN5h8_efSqpO6M.png" id="2_7801k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycp73"]
 bg_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
@@ -14,14 +15,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1iy4y")
 
-[node name="Background2" type="ColorRect" parent="." unique_id=1586806144]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1387477499]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.29411766, 0.5019608, 1)
+texture = ExtResource("2_7801k")
+expand_mode = 1
 
 [node name="Background" type="TextureRect" parent="." unique_id=1195062427]
 layout_mode = 1

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cnwplv0nemtkt"]
 
 [ext_resource type="Script" uid="uid://2gtehtkwla4h" path="res://scenes/screens/shop_select.gd" id="1_204xn"]
-[ext_resource type="Texture2D" uid="uid://dc3sju54ab0ve" path="res://sprites/market/1_market.png" id="2_b8m5a"]
 [ext_resource type="PackedScene" uid="uid://hj2uw3icvjv0" path="res://scenes/components/Dialog.tscn" id="2_sbgt5"]
-[ext_resource type="Texture2D" uid="uid://dq48h6u4a5kwj" path="res://sprites/market/2_market.png" id="3_u6glp"]
+[ext_resource type="Texture2D" uid="uid://dp3g6sehb06tv" path="res://sprites/market/bak_mar.png" id="2_u6glp"]
+[ext_resource type="Texture2D" uid="uid://d2abf6e60h2rd" path="res://sprites/market/1_maaaaa.png" id="3_u6glp"]
+[ext_resource type="Texture2D" uid="uid://brxdniq3kqsn4" path="res://sprites/market/2_maadsadsa.png" id="4_n0bap"]
 
 [node name="ShopSelect" type="Control" unique_id=376370739]
 layout_mode = 3
@@ -14,14 +15,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_204xn")
 
-[node name="Background" type="ColorRect" parent="." unique_id=263218934]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=820989370]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.29411766, 0.5019608, 1)
+texture = ExtResource("2_u6glp")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=404094831]
 layout_mode = 1
@@ -68,7 +70,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(160, 240)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("2_b8m5a")
+texture = ExtResource("3_u6glp")
 expand_mode = 1
 stretch_mode = 5
 
@@ -91,7 +93,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(160, 240)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("3_u6glp")
+texture = ExtResource("4_n0bap")
 expand_mode = 1
 stretch_mode = 5
 

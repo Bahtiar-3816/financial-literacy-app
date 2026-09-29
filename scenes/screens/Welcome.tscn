@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b34g0i0u6f4gq"]
 
 [ext_resource type="Script" uid="uid://m3bljrp0cl4g" path="res://scenes/screens/welcome.gd" id="1_5g1ts"]
+[ext_resource type="Texture2D" uid="uid://c175ducjeyd70" path="res://sprites/products/T8PF-9n5acjCQ4A5cN5h8_efSqpO6M.png" id="2_ixb20"]
 
 [node name="Control" type="Control" unique_id=484386590]
 layout_mode = 3
@@ -11,14 +12,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5g1ts")
 
-[node name="Background" type="ColorRect" parent="." unique_id=195676749]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=395671464]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.29411766, 0.5019608, 1)
+texture = ExtResource("2_ixb20")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1177439367]
 layout_mode = 1
